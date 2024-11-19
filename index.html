@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesthetic Escapes</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kust&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mugle&family=The+Cat+Has+a+Hat&display=swap">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Garamond', serif;
+            background-image: url('https://wallpapers.com/images/featured/indian-aesthetic-a2nktltm2r9dlrlo.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 3px solid red;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(45deg, rgb(101, 218, 218), rgb(242, 0, 0));
+            padding: 10px 0;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-family: 'Marola', cursive;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        h1 {
+            font-family: 'Kust', cursive;
+            color: red;
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .section {
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-family: 'The Cat Has a Hat', cursive;
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        .location-card {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            border: 2px solid red;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            transition: transform 0.2s;
+        }
+
+        .location-card:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid red;
+        }
+
+        .description {
+            font-family: 'Nyam', cursive;
+            font-weight: bold;
+            color: black;
+        }
+
+        .tour-date {
+            font-family: 'Mugle', cursive;
+            color: red;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-top: 3px solid red;
+        }
+
+        @media (max-width: 768px) {
+            .location-card {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        .login-container {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0;
+    }
+
+    .form-card {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        width: 300px;
+        text-align: left;
+    }
+
+    .form-card h3 {
+        margin-bottom: 10px;
+        font-family: 'Garamond', serif;
+    }
+
+    .form-card label {
+        display: block;
+        margin: 10px 0 5px;
+    }
+
+    .form-card input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family: 'Kust', 'Mugle', 'Marola', 'The Cat Has a Hat', 'Nyam', sans-serif;
+    }
+
+    .form-card button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .form-card button:hover {
+        background-color: darkred;
+    }
+
+  .location-grid {
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+    text-align: center; opacity: 90%; border-radius: 80px;
+  }
+  .location-grid .section-title {
+    font-size: 32px;
+    font-family: 'Garamond', serif;
+    color: #222;
+    margin-bottom: 30px;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+ 
+  .grid-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+  .grid-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  .grid-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+  }
+  .grid-content {
+    padding: 15px;
+    text-align: left;
+  }
+  .grid-content h3 {
+    font-size: 20px;
+    font-family: 'Macbeth', serif;
+    color: #e63946;
+    margin-bottom: 10px;
+  }
+  .grid-content p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+  }
+  .grid-content p strong {
+    color: #1d3557;
+  }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Aesthetic Escapes <img src="https://png.pngtree.com/png-clipart/20231004/original/pngtree-india-map-raster-picture-image_13086563.png" alt="Map of India" style="height: 150px; width: 150px;"></h1>
+    </header>
+    
+    <nav>
+        <a href="north.html">North India</a>
+        <a href="south.html">South India</a>
+        <a href="east.html">East India</a>
+        <a href="west.html">West India</a>
+        <a href="treks.html">Trek Locations</a>
+        <a href="login.html">Login/Register</a>
+    </nav>
+    <marquee  height="50" width="100%" ><font color="White" size="60%"><b>Welcome to India!</b></font></marquee>
+
+    <section class="location-grid">
+        <h2 class="section-title" style="color: #e63946;">Hidden Gems of India</h2>
+        <div class="grid-container">
+          
+          <div class="grid-card">
+            <img src="https://darter.in/wp-content/uploads/2018/12/spiti-valley-02.jpg" alt="Spiti Valley, Himachal Pradesh">
+            <div class="grid-content">
+              <h3>Spiti Valley, Himachal Pradesh</h3>
+              <p>Explore the barren beauty of this Himalayan desert with its ancient monasteries and scenic trails.</p>
+              <p><strong>Best Time to Visit:</strong> May to September</p>
+            </div>
+          </div>
+         
+          <div class="grid-card">
+            <img src="https://travellersworldonline.com/wp-content/uploads/2023/06/15-June-Bali-1-1.jpg" alt="Ziro Valley, Arunachal Pradesh">
+            <div class="grid-content">
+              <h3>Ziro Valley, Arunachal Pradesh</h3>
+              <p>Known for its lush green landscapes, vibrant festivals, and Apatani tribal culture.</p>
+              <p><strong>Best Time to Visit:</strong> March to October</p>
+            </div>
+          </div>
+         
+          <div class="grid-card">
+            <img src="https://s7ap1.scene7.com/is/image/incredibleindia/1-om-beach-gokarna-karnataka-city-hero?qlt=82&ts=1726720866389" alt="Gokarna, Karnataka">
+            <div class="grid-content">
+              <h3>Gokarna, Karnataka</h3>
+              <p>A serene alternative to Goa, Gokarna offers pristine beaches and spiritual charm.</p>
+              <p><strong>Best Time to Visit:</strong> October to March</p>
+            </div>
+          </div>
+          
+          <div class="grid-card">
+            <img src="https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2023/12/19/96a0746d47518ce80fb14cbfae3d95d1_1000x1000.jpg" alt="Mawlynnong, Meghalaya">
+            <div class="grid-content">
+              <h3>Mawlynnong, Meghalaya</h3>
+              <p>Dubbed the cleanest village in Asia, Mawlynnong is a nature lover's paradise with living root bridges.</p>
+              <p><strong>Best Time to Visit:</strong> June to September</p>
+            </div>
+          </div>
+         
+          <div class="grid-card">
+            <img src="https://pune.news/wp-content/uploads/2023/10/Places-to-Visit-in-Hampi.webp" alt="Hampi, Karnataka">
+            <div class="grid-content">
+              <h3>Hampi, Karnataka</h3>
+              <p>A UNESCO World Heritage site, Hampi is a treasure trove of ancient ruins and breathtaking landscapes.</p>
+              <p><strong>Best Time to Visit:</strong> October to February</p>
+            </div> 
+          </div>
+         
+<div class="grid-card">
+        <img src="https://www.fodors.com/wp-content/uploads/2022/11/11.jpg" alt="Chettinad, Tamil Nadu">
+        <div class="grid-content">
+          <h3>Chettinad, Tamil Nadu</h3>
+          <p><strong>Best Time to Visit:</strong> November to February</p>
+          <p>Known for its unique cuisine and palatial mansions, Chettinad is a journey into Tamil heritage.</p>
+        </div>
+      </div>
+      
+      <div class="grid-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Lonar_Sarovar_lake_Maharastra.jpg" alt="Lonar Lake, Maharashtra">
+        <div class="grid-content">
+          <h3>Lonar Lake, Maharashtra</h3>
+          <p><strong>Best Time to Visit:</strong> November to February</p>
+          <p>A fascinating saltwater lake formed by a meteor impact, surrounded by temples and lush greenery.</p>
+        </div>
+      </div>
+      
+      <div class="grid-card">
+        <img src="https://media.assettype.com/outlooktraveller%2F2023-12%2Fa6ed3df2-a42b-4738-a9ef-1383001f2eec%2Fmandarmani1.jpg?rect=0%2C6%2C1000%2C563&w=1024&auto=format%2Ccompress&fit=max" alt="Mandarmani, West Bengal">
+        <div class="grid-content">
+          <h3>Mandarmani, West Bengal</h3>
+          <p><strong>Best Time to Visit:</strong> November to February</p>
+          <p>A tranquil beach destination with golden sands, perfect for a peaceful getaway in Eastern India.</p>
+        </div>
+      </div>
+      </section>
+      
+    
+   <section class="section" id="blog">
+        <h2 style="color: red;">Travel Blog</h2>
+        <p>
+            <strong>Mystical Mornings in Banaras</strong></p>
+            There’s something otherworldly about watching the sunrise over the ghats of Varanasi. As dawn breaks, the Ganges glows in hues of orange and gold, reflecting the vibrant life 
+            that awakens along its banks. Priests in saffron robes chant morning prayers, the air thick with incense and the quiet hum of history. It’s as if time has stood still in this sacred city. 
+            Walk the ghats, join the boat rides at dawn, and let the city’s mysticism work its way into your soul.</p>
+          <p>
+            Best Time to Visit: October to February</p>
+           <p> Tour Dates: November 5, December 15, January 20</p>
+        
+        <br>
+
+        <strong>Agra - The City of Eternal Love and Legacy</strong>
+        
+        <p>Agra, home to the iconic Taj Mahal, is a city that resonates with romance and history. Located on the banks of the Yamuna River, Agra's architectural marvels from the Mughal era stand as timeless testaments to India’s rich heritage. Beyond the Taj Mahal, the Agra Fort and Fatehpur Sikri offer glimpses into the grandeur of a bygone era.
+        
+        When in Agra, don’t miss trying the delectable petha, a sweet treat that’s synonymous with the city. The best time to visit Agra is from October to March when the weather is pleasant for exploring its monuments. A sunrise view of the Taj Mahal will leave you enchanted for a lifetime.</p>
+<p>Best Time to visit: October to March.</p> 
+<p>Tour Dates:
+    February 10-12 (Spring Delights)<br>
+    November 18-20 (Mughal Heritage Walk)</p>
+<br>
+
+   <strong> Darjeeling - The Queen of Hills</strong>
+    
+    
+   <p>Nestled in the foothills of the Himalayas, Darjeeling is a paradise for nature lovers and tea connoisseurs. Known for its lush tea gardens and the breathtaking view of Mount Kanchenjunga, this charming hill station exudes tranquility. A ride on the Darjeeling Himalayan Railway, fondly called the "Toy Train," takes you on a nostalgic journey through scenic landscapes.</p>
+    
+   <p>Best Time to Visit: March to May, September to November</p>
+   <p> Tour Dates:
+    April 5-7 (Spring Blossoms)<br>
+    October 12-14 (Autumn Escapes)</p>
+<br>
+
+ <strong> Manali - Adventures in the Himalayas</strong>
+
+
+<p>Manali, nestled in the Kullu Valley of Himachal Pradesh, is a haven for thrill-seekers and nature lovers alike. Whether it's trekking through lush trails, paragliding over breathtaking valleys, or simply soaking in the beauty of the Beas River, Manali offers an unmatched blend of adventure and serenity.</p>
+
+<p>Best Time to Visit: October to February (snow), May to June (trekking)</p>
+<p>Tour Dates:
+January 10-12 (Winter Wonderland)<br>
+June 15-17 (Summer Adventure Trek)
+<br>
+
+<strong><p>Stay tuned for exciting articles, tips, and stories from travelers across India.</p></strong>
+    </section>
+
+
+    
+    <section class="section" id="events">
+        <h2 style="color: red;">Upcoming Events</h2>
+        <p>Check out our calendar for upcoming events and festivals across India!</p>
+       <p><b> 1. Pushkar Camel Fair</b><br>
+        Location: Pushkar, Rajasthan<br>
+        Date: November 20-28, 2024<br>
+        Experience one of the largest camel fairs in the world, where vibrant Rajasthani culture, music, dance, and local crafts come alive.
+       </p>
+       <p>
+       <b> 2. International Yoga Festival</b><br>
+        Location: Rishikesh, Uttarakhand<br>
+        Date: March 1-7, 2024<br>
+        Join yoga enthusiasts from across the globe in the serene setting of Rishikesh for a rejuvenating experience of wellness and spirituality.
+       </p>
+       <p>
+       <b> 3. Sunburn Festival</b><br>
+        Location: Vagator, Goa<br>
+        Date: December 28-30, 2024<br>
+        Asia's biggest electronic dance music festival offers a spectacular mix of music, beaches, and endless party vibes.
+       </p>
+
+       <p>
+       <b> 4. Rath Yatra</b><br>
+        Location: Puri, Odisha<br>
+        Date: July 10, 2024<br>
+        Celebrate this grand festival of Lord Jagannath with vibrant chariot processions and spiritual fervor in the holy town of Puri.
+       </p>
+
+       <p>
+        <b>5. Snow Festival</b><br>
+        Location: Manali, Himachal Pradesh<br>
+        Date: January 15-20, 2024<br>
+        Embrace the chill and adventure during the annual snow festival, featuring snow sculpting, skiing, and cultural performances.
+       </p>
+    </section>
+
+
+
+
+    <footer class="footer">
+        <p>&copy; 2024 Aesthetic Escapes. All rights reserved.</p>
+    </footer>
+</body>
+</html>

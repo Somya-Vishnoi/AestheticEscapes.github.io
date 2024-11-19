@@ -1,0 +1,74 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f1f1;
+    color: #333; 
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #5e4b8d; 
+    color: white;
+    padding: 15px;
+    text-align: right;
+}
+
+.header {
+    background: url('https://i.pinimg.com/736x/57/29/b5/5729b5dafd01bd9592c1a5fec705229f.jpg'); 
+    background-size: cover;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.section {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #5e4b8d; 
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.location-card {
+    border: 2px solid #f9a825; 
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.location-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.tour-date {
+    font-style: italic;
+    color: #e64a19; 
+    font-weight: bold;
+}
+
+.description {
+    color: #5e4b8d; 
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 20px; }
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #5e4b8d; 
+    color: white;
+}
+
+  

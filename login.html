@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kust&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mugle&family=The+Cat+Has+a+Hat&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Login/Register - Aesthetic Escapes</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Garamond', serif;
+        background-image: url('https://wallpapers.com/images/featured/indian-aesthetic-a2nktltm2r9dlrlo.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        color: #333;
+    }
+
+    header {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 10px 0;
+        text-align: center;
+        border-bottom: 3px solid red;
+        position: relative;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(45deg, rgb(101, 218, 218), rgb(242, 0, 0));
+        padding: 10px 0;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        font-family: 'Marola', cursive;
+        transition: background 0.3s;
+    }
+
+    nav a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+    }
+
+    h1 {
+        font-family: 'Kust', cursive;
+        color: red;
+        margin: 0;
+        font-size: 2.5rem;
+    }
+
+    .section {
+        margin: 20px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+        font-family: 'The Cat Has a Hat', cursive;
+        color: red;
+        margin-bottom: 10px;
+    }
+
+    .location-card {
+        display: inline-block;
+        width: 30%;
+        margin: 10px;
+        border: 2px solid red;
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.9);
+        transition: transform 0.2s;
+    }
+
+    .location-card:hover {
+        transform: scale(1.05);
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-bottom: 2px solid red;
+    }
+
+    .description {
+        font-family: 'Nyam', cursive;
+        font-weight: bold;
+        color: black;
+    }
+
+    .tour-date {
+        font-family: 'Mugle', cursive;
+        color: red;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 20px 0;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-top: 3px solid red;
+    }
+
+    @media (max-width: 768px) {
+        .location-card {
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .login-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.form-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: left;
+}
+
+.form-card h3 {
+    margin-bottom: 10px;
+    font-family: 'Garamond', serif;
+}
+
+.form-card label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.form-card input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Kust', 'Mugle', 'Marola', 'The Cat Has a Hat', 'Nyam', sans-serif;
+}
+
+.form-card button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form-card button:hover {
+    background-color: darkred;
+}
+
+</style>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <h1>Aesthetic Escapes <img src="https://png.pngtree.com/png-clipart/20231004/original/pngtree-india-map-raster-picture-image_13086563.png" alt="Map of India" style="height: 150px; width: 150px;"></h1>
+</header>
+
+    <div class="navbar">
+    
+   
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="north.html">North India</a>
+      <a href="south.html">South India</a>
+      <a href="east.html">East India</a>
+      <a href="west.html">West India</a>
+      <a href="treks.html">Treks</a>
+    </nav>
+  </div>
+  <!-- Login Form -->
+  <marquee  height="50" width="100%" ><font color="White" size="60%"><i>Login for future updates</i></font></marquee>
+  <section class="section" id="login">
+    <h2 style="color: red;">Login/Register</h2>
+    <p>Create an account or log in to access exclusive content and offers!</p>
+    <section class="section" id="login">
+        
+        <div class="login-container">
+            <div class="form-card">
+                <h3 style="color: black;">Login to Your Account</h3>
+                <form action="/login" method="post">
+                    <label for="username" style="color: black;">Username:</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter your username" />
+    
+                    <label for="password" style="color: black;">Password:</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password" />
+    
+                    <button type="submit" style="background-color: red; color: white;">Login</button>
+                </form>
+            </div>
+            <div class="form-card">
+                <h3 style="color: black;">Don't have an account?</h3>
+                <p style="color: black;">Create one to access exclusive content and offers!</p>
+                <form action="/register" method="post">
+                    <label for="new-username" style="color: black;">Username:</label>
+                    <input type="text" id="new-username" name="new-username" required placeholder="Choose a username" />
+    
+                    <label for="new-password" style="color: black;">Password:</label>
+                    <input type="password" id="new-password" name="new-password" required placeholder="Choose a password" />
+    
+                    <button type="submit" style="background-color: red; color: white;">Register</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2024 Aesthetic Escapes. All rights reserved.</p>
+    </footer>
+</body>
+</html>
